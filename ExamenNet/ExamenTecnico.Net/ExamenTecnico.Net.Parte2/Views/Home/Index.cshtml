@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Examen Tecnico";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Examen Tecnico </h1>
+        <p>
+            La aplicación web considera las siguientes reglas de negocio. Un banco puede
+            tener muchas sucursales y las órdenes de pago pueden ser pagadas en
+            diferentes sucursales de cada banco en soles ó dólares. Asimismo, el estado de
+            la orden de pago puede ser pagada, declinada, fallida y anulada.
+        </p>
+        <p>
+            En primer lugar, se desea crear una solución para el mantenimiento de todas las
+            entidades en una aplicación web basada.
+        </p>
+        <p>
+            En segundo lugar, se desea liberar un servicio web en formato JSON que pueda
+            listar todas las órdenes de pago de una sucursales contemplando el filtrado por
+            tipo de moneda.
+
+            <a href="https://localhost:44373/api/OrdenesTipoMoneda/GetAllTipoMoneda/Dolares">https://localhost:44373/api/OrdenesTipoMoneda/GetAllTipoMoneda/Dolares</a>
+        </p>
+        <p>
+            Finalmente, se debe liberar un servicio web en formato XML que permita buscar
+            todas las sucursales de acuerdo a un banco.
+
+            <a href="https://localhost:44373/api/SucursalBanco/GetAllBanco/1">https://localhost:44373/api/SucursalBanco/GetAllBanco/1</a>
+        </p>
+    </div>

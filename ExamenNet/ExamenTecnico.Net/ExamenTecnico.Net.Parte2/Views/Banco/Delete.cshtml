@@ -1,0 +1,39 @@
+﻿@model ExamenTecnico.Net.Parte2.BE.BancoBE
+
+@{
+    ViewData["Title"] = "Eliminando Banco";
+}
+
+<h1>Eliminando Banco</h1>
+
+<h3>¿Está seguro que desea eliminarlo?</h3>
+<div>
+    @*<h4>BancoBE</h4>*@
+    <hr />
+    <dl class="row">
+
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Retornar</a>
+    </form>
+</div>

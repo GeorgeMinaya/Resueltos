@@ -1,0 +1,50 @@
+﻿@model ExamenTecnico.Net.Parte2.Models.OrdenPagoSucursalModel
+
+@{
+    ViewData["Title"] = "Eliminando Orden de Pago";
+}
+
+<h1>Eliminando Orden de Pago</h1>
+
+<h3>¿Está seguro que desea eliminarlo?</h3>
+<div>
+    <h4>@*OrdenPagoSucursalModel*@</h4>
+    <hr />
+    <dl class="row">       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estados)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Moneda)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoPago)
+        </dd>        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreSucursal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreSucursal)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Retornar</a>
+    </form>
+</div>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ExamenTecnico.Net.Parte2.BE.BancoBE>
+
+@{
+    ViewData["Title"] = "Lista de Bancos";
+}
+
+<h1>Bancos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Banco</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Datalles</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
